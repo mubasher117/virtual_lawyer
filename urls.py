@@ -7,5 +7,6 @@ app_name = 'virtual_lawyer'
 urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
+    path('chatbot/', views.chatbot, name= 'chatbot'),
 
 ]

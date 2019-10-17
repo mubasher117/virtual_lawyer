@@ -6,3 +6,6 @@ def index(request):
 
 def about(request):
     return render(request,'virtual_lawyer/about.html')
+
+def chatbot(request):
+    return(render(request, 'virtual_lawyer/chatbot.html'))

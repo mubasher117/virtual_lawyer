@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{% static 'virtual_lawyer/css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'virtual_lawyer/css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'virtual_lawyer/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'virtual_lawyer/css/chatbot.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -52,7 +53,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="{% url 'virtual_lawyer:index' %}">home</a></li>
-                                        <li><a href="Courses.html">Chatbot</a></li>
+                                        <li><a href="{% url 'virtual_lawyer:chatbot' %}">Chatbot</a></li>
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                     <li><a href="course_details.html">Legal Assistant</a></li>
@@ -75,14 +76,13 @@
                             <div class="log_chat_area d-flex align-items-center">
                                 <a href="#test-form" class="login popup-with-form">
                                     <i class="flaticon-user"></i>
-                                    <span>log in</span>
+                                    <span>Log In</span>
                                 </a>
-                                <div class="live_chat_btn">
-                                    <a class="boxed_btn_orange" href="#">
-                                        <i class="fa fa-phone"></i>
-                                        <span>111 111 169</span>
-                                    </a>
-                                </div>
+                                <a href="#test-form2" class="login popup-with-form">
+                                       
+                                        <span style="padding : 5px ; border: 2px solid white">Sign Up</span>
+                                </a>
+                                
                             </div>
                         </div>
                         <div class="col-12">
