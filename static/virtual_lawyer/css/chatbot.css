@@ -3,11 +3,12 @@
     max-width: 500 !important;
     margin: auto;
     margin-top: 4%;
-    font-family: sans-serif;
+    font-family: sans-serif; 
     letter-spacing: 0.5px;
     box-sizing: border-box;
      align-content: center;
-     width: 800px;
+     width: 54%;
+
 }
 #cb-img-chat-head
 {
@@ -17,6 +18,7 @@
 .cb-msg-header
 {
     border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
     height: 10%;
     border-bottom: none;
@@ -53,11 +55,14 @@
 }
 .cb-chat-page
 {
-    padding: 0 0 50px 0;
+    border: 1px solid #ccc;
+    padding: 0 0 5px 0;
+    overflow-y: auto; 
+    margin-bottom: 6px;
+    height: 526px;
 }
 .cb-msg-inbox
 {
-    border: 1px solid #ccc;
     overflow: hidden;
     padding-bottom: 30px;
 }
@@ -83,16 +88,17 @@
 }
 .cb-recieved-msg
 {
+    overflow: hidden;
     display: inline-block;
     padding: 0 0 0 10px;
     vertical-align: top;
-    width: 92%;
+    width: 90%;
 }
-.cb-recieved-msg-inbox
+.cb-recieved-msg
 {
     width: 57%;
 }
-.cb-recieved-msg-inbox p
+.cb-recieved-msg p
 {
     background: #efefef none repeat scroll 0 0;
     border-radius: 10px;
@@ -106,6 +112,81 @@
 {
     color: #777;
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     margin: 8px 0 0;
+}
+.cb-outgoing-chats
+{
+    overflow: hidden; 
+    margin: 26px 20px;
+}
+.cb-outgoing-msg
+{
+    float: left;
+    width: 54%;
+    margin-left: 42%;
+}
+.cb-outgoing-msg p
+{
+    background: #007bff none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+
+
+}
+.cb-outgoing-chat-img
+{
+    display: inline-block;
+    width: 20px;
+    float: right;
+}
+.cb-msg-bottom
+{
+    position: relative;
+    height: 44px;
+    background-color: #007bff;
+    margin-bottom: 5%;
+    padding: 1%;
+
+}
+.cb-input-group
+{
+    outline: none !important;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-left: 40%;
+
+}
+.cb-form-control
+{
+    border: none !important;
+    border-radius: 20px !important;
+    width: 90%;
+    margin-left: 1%;
+}
+.cb-form-control:focus
+{
+    border-color: none !important;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+}
+.cb-input-group-text
+{
+    background: transparent !important;
+    border: none !important;
+    cursor : pointer;
+}
+.cb-input-group .fa
+{
+    color: #007bff;
+
+}
+.cb-input-group-append
+{
+    float: right;
+    margin-right: 1%;
 }

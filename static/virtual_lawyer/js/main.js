@@ -315,3 +315,18 @@ mailChimp();
         });
 
 })(jQuery);	
+
+function myFunction() {
+  if (window.innerWidth < 1353) {
+      document.getElementById("cb-msg-bottom").style.height = "60px";
+      document.getElementById("cb-input-group").style.height = "50px";
+  
+
+      
+  }
+  else{
+      document.getElementById("cb-msg-bottom").style.height = "44px";
+      document.getElementById("cb-input-group").style.height = "26px";   
+  }
+}
+setInterval(myFunction, 50)
