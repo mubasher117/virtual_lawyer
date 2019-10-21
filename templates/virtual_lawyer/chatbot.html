@@ -8,8 +8,20 @@
             "July", "August", "September", "October", "November", "December"
         ];
 
-
         var msg = document.getElementById("cb-form-control").value;
+        var BotResponse = ""
+        $.ajax({
+            url : '',
+            type: "POST",
+            data : {talk: msg},
+            success:function(data) {
+                console.log(data)
+                setTimeout(function() {
+                addBotChat(BotResponse);
+            }, 4000)
+    }
+        })
+        alert("Entered in add chat")
         document.getElementById("cb-form-control").value = " ";
         var current = new Date()
         var dateTime = current.getHours() + ":" + current.getMinutes() + " | " + monthNames[current.getMonth()] + " " + current.getDate();
@@ -52,13 +64,16 @@
     }
 
 
-    function addBotChat() {
+    function addBotChat(response) {
         const monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         ];
 
 
-        var msg = document.getElementById("botChat").value;
+        // var msg = "{{request.session.BotResponse}}";
+        var msg = response
+        // var msg = document.getElementById("botResponse").value
+        alert(msg)
         var current = new Date()
         var dateTime = current.getHours() + ":" + current.getMinutes() + " | " + monthNames[current.getMonth()] + " " + current.getDate();
 
@@ -142,8 +157,8 @@
                         </div>
                         <div class="cb-recieved-msg">
                             <div class="cb-recieved-msg-inbox">
-                                <p>Hi! Welcome to Virtual Legal Advisor
-
+                                <p>
+                                    Hi! How can I help you?
                                 </p>
                                 <span class="cb-time">11:01 | October 11</span>
                             </div>
@@ -160,9 +175,10 @@
 
     <div class="cb-msg-bottom" id="cb-msg-bottom">
         <div class="cb-input-group" id="cb-input-group">
-            <input type="text" class="cb-form-control" id="cb-form-control" placeholder="write message...">
+            <input type="text" class="cb-form-control" id="cb-form-control" placeholder="write message..." name="talk" required>
             <div class="cb-input-group-append">
-                <button class="cb-input-group-text" onclick="addChat()">
+                <input type = 'hidden' value = {{BotResponse}} id = 'botResponse'>
+                <button class="cb-input-group-text" name = 'taskAdd' type="submit" onclick="addChat()">
                     <i class="fa fa-paper-plane" onfocus=""></i>
                 </button>
 
